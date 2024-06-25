@@ -171,7 +171,7 @@ li span {
 }
 
 li button {
-    background-color: #fc5c7d; /* Red color for delete button */
+    background-color: #ff0000; /* Red color for delete button */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -181,5 +181,5 @@ li button {
 }
 
 li button:hover {
-    background-color: #ff6b81; /* Darker shade of red on hover */
+    background-color: #cc0000; /* Darker shade of red on hover */
 }
