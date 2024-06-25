@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Get-To-It List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="app" class="dark-mode">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Categories/Tags</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            <label class="switch">
+                <input id="dark-mode-toggle" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <header>
+                <h1>Aaron's Get-To-It List</h1>
+            </header>
+
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="New task" required>
+                <input type="date" id="date-input" required>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <ul id="task-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

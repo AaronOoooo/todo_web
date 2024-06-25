@@ -1,0 +1,185 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Main Layout */
+#app {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #111;
+    padding: 20px;
+}
+
+#sidebar h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fc5c7d;
+}
+
+/* Dark Mode Toggle */
+.switch {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+    background-color: #2a5298; /* Dark blue color for checked toggle */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Main Content */
+#main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #1e3c72; /* Blue color for header */
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1e3c72; /* Blue color for button */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a5298; /* Darker shade of blue on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2a5298; /* Dark blue color for task item */
+    color: white;
+}
+
+li span {
+    flex: 1;
+    font-size: 16px;
+}
+
+li button {
+    background-color: #fc5c7d; /* Red color for delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+li button:hover {
+    background-color: #ff6b81; /* Darker shade of red on hover */
+}
